@@ -197,17 +197,18 @@ h1 {
 .overlay {
     
     position: absolute;
-    z-index: 0;
+    z-index: 3;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
+    margin-top: 10%;
     
 }
 
-.share, .overlay {
+/* .share, .overlay {
     display: none;
-}
+} */
 
 .show-share {
     display: block;
@@ -222,11 +223,12 @@ h1 {
     width: 50%;
     z-index: 1;
     padding: 1em;
-    background:rgba(0, 0, 0, .5);
+    background:rgba(0, 0, 0, .8);
 }
 
 h2 {
     margin: 0;
+    color: white;
 }
 .social {
     border: none;
