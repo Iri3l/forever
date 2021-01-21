@@ -206,9 +206,9 @@ h1 {
     
 }
 
-/* .share, .overlay {
+ .share, .overlay {
     display: none;
-} */
+} 
 
 .show-share {
     display: block;
