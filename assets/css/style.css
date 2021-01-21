@@ -174,3 +174,64 @@ h1 {
     animation-delay: 7s;
      width: 35px;
 }
+
+/* Share button */
+
+.share-promotion {
+    border: none;
+    outline: none;
+    padding: 1em 1.5em;
+    font-size: 1rem;
+    margin-top: 2em;
+    cursor: pointer;
+    background: rgb(158, 0, 250);
+    color: white;
+    font-weight: bold;
+    will-change: background;
+    transition: background 1s;
+}
+.share-promotion:hover {
+    background: rgb(229, 0, 250);
+
+}
+.overlay {
+    
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.share, .overlay {
+    display: none;
+}
+
+.show-share {
+    display: block;
+}
+
+.share {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 90%;
+    margin: auto;
+    width: 50%;
+    z-index: 1;
+    padding: 1em;
+    background:rgba(0, 0, 0, .5);
+}
+
+h2 {
+    margin: 0;
+}
+.social {
+    border: none;
+    padding: .8em 1.2em;
+    margin-top: 3em;
+    width: 32%;
+    cursor: pointer;
+}

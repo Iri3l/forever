@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-165027565-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-165027565-1');
-</script>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165027565-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-165027565-1');
+    </script>
     <meta charset="UTF-8">
-  <meta name="description" content="Passionate webpage designer, with a keen desire for coding.
+    <meta name="description" content="Passionate webpage designer, with a keen desire for coding.
 	 Code editing, graphic, hosting, all you need for your business.">
-	 <meta name="keywords" content="Aloe vera products, forever living, forever products, aloe offers, shop now, buy now, aloe business">
-	 <meta name="author" content="Irinel Lazarovici">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords"
+        content="Aloe vera products, forever living, forever products, aloe offers, shop now, buy now, aloe business">
+    <meta name="author" content="Irinel Lazarovici">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
@@ -23,6 +25,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Irinel</title>
 </head>
+
 <body>
     <div class="hero">
         <div class="navbar">
@@ -31,23 +34,27 @@
         <br>
         <div class="content">
             <div class="created">
-            <a href="https://lazarovici.co.uk">
-                <p class="creator">by Lazarovici Web Design LLC&trade;</p>
-            </a>
+                <a href="https://lazarovici.co.uk">
+                    <p class="creator">by Lazarovici Web Design LLC&trade;</p>
+                </a>
             </div>
-             <!-- <small>Welcome</small> -->
+            <!-- <small>Welcome</small> -->
             <div class="promotion">
-            <h1>Take a tour to see all Forever living products and buy for 15% off today as welcome and happy shopping.</h1>
+                <h1>Take a tour to see all Forever living products and buy for 15% off today as welcome and happy
+                    shopping.</h1>
                 <div class="action">
                     <a href="https://thealoeveraco.shop/NNJYV7nR">
                         <button type="=button">Buy 15% Off</button>
                     </a>
                     <a href="https://youtu.be/SXTBNw_aTyY">
-                        <div><button type="=button">Why Forever products?</button></div></a> 
+                        <div><button type="=button">Why Forever products?</button></div>
+                    </a>
                     <a href="https://youtu.be/BGcXPam-lRc">
-                         <div><button type="=button">Why In This Business?</button></div></a> 
+                        <div><button type="=button">Why In This Business?</button></div>
+                    </a>
                     <a href="https://joinnow.foreverliving.com/GBR/en-GB/welcome?distribID=440805075421">
-                         <div><button type="=button">Join the team</button></div> </a> 
+                        <div><button type="=button">Join the team</button></div>
+                    </a>
                 </div>
             </div>
             <!-- <div class="preferred">
@@ -60,7 +67,48 @@
                     <button type="=button">Start Your Own Business</button>
                 </a>
             </div> -->
-        </div> 
+            <button class="share-promotion">Share promotion</button>
+        </div>
+        <div class="overlay">
+                <div class="share">
+                    <h2>Share Now</h2>
+                    <button class="social">Social Link</button>
+                    <button class="social">Social Link</button>
+                    <button class="social">Social Link</button>
+                </div>
+            </div>
+    <!-- JavaScript -->
+    <script>
+
+        const shareButton = document.querySelector('button');
+        const overlay = document.querySelector('.overlay');
+        const shareModal = document.querySelector('.share');
+
+        const title = window.document.title;
+        const url = window.document.location.href;
+
+        shareButton.addEventListener('click', () => {
+            if (navigator.share) {
+                navigator.share({
+                    title: `$(title)` ,
+                    url: `$(url)`
+                }).then(() => {
+                    console.log('Thanks for sharing');
+                })
+                .catch(console.error);
+            } else {
+                overlay.classList.add('show-share');
+                shareModal.classList.add('show-share');
+            }
+        })
+
+        overlay.addEventListener('click', () => {
+            overlay.classList.remove('show-share');
+            shareModal.classList.remove('show-share');
+        })
+
+    </script>
+
         <div class="side-bar">
             <img src="assets/images/menu.png" alt="menu" class="menu">
 
@@ -68,23 +116,20 @@
                 <a href="https://www.facebook.com/w3bdesign">
                     <img src="assets/images/fb.png" alt="facebook">
                 </a>
-                <a href="https://www.instagram.com/lazarovici_web_design/">   
+                <a href="https://www.instagram.com/lazarovici_web_design/">
                     <img src="assets/images/ig.png" alt="instagram" />
                 </a>
                 <a href="https://twitter.com/IrinelLazarovi1">
-                    <img src="assets/images/tw.png" alt="twitter" >
+                    <img src="assets/images/tw.png" alt="twitter">
                 </a>
             </div>
             <div class="useful-links" style="width: 50px; text-align: center; position: absolute; bottom: 30px;">
-             <div class="share-btn-container">   
-               <a href="#">
-                    <img src="assets/images/share.png" alt="share">
-                </a> 
-
-            </div>
-                    <a href="http://irinel.myforever.biz/personal-website/">
-                        <img src="assets/images/info.png" alt="info">
+                    <a href="#">
+                        <img src="assets/images/share.png" alt="share">
                     </a>
+                <a href="http://irinel.myforever.biz/personal-website/">
+                    <img src="assets/images/info.png" alt="info">
+                </a>
             </div>
         </div>
         <div class="bubbles">
@@ -98,4 +143,5 @@
     </div>
 
 </body>
+
 </html>
