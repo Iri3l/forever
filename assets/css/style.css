@@ -31,7 +31,7 @@
 }
 .navbar {
     width: 85%;
-    height: 30%;
+    height: 20%;
     margin: auto;
     display: flex;
     align-items: center;
@@ -66,9 +66,13 @@ button {
 
 h1 {
     font-size: 30px;
-    margin: 10px 0 30px;
+    margin: 30px;
     line-height: 30px;
 } 
+
+.promotion h1 {
+    font-size: 110%;
+}
 
 .business {
     padding-top: 10px;
@@ -212,6 +216,7 @@ h1 {
 
 .show-share {
     display: block;
+    z-index: 1;
 }
 
 .share {
@@ -221,7 +226,7 @@ h1 {
     top: 90%;
     margin: auto;
     width: 50%;
-    z-index: 1;
+    z-index: 4;
     padding: 1em;
     background:rgba(0, 0, 0, .8);
 }
